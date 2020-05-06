@@ -4,11 +4,9 @@
 %define python3_vers python3
 %endif
 
-%global releaseno 1
-
 Name:           python-wradlib
 Version:        1.6.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        weather radar data processing
 
 License:        MIT
@@ -32,6 +30,7 @@ Requires:  %{python3_vers}-numpy
 Requires:  %{python3_vers}-scipy
 Requires:  %{python3_vers}-matplotlib
 Requires:  %{python3_vers}-h5py
+Requires:  %{python3_vers}-h5netcdf
 Requires:  %{python3_vers}-netcdf4
 Requires:  %{python3_vers}-xarray
 Requires:  %{python3_vers}-xmltodict
@@ -62,5 +61,8 @@ documented and easy to use.
 
 
 %changelog
+* Wed May  6 2020 Daniele Branchini <dbranchini@arpae.it> - 1.6.2-2
+- Added h5netcdf dependency
+
 * Wed May  6 2020 Daniele Branchini <dbranchini@arpae.it> - 1.6.2-1
 - Initial package
