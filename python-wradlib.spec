@@ -5,8 +5,8 @@
 %endif
 
 Name:           python-wradlib
-Version:        1.6.2
-Release:        2%{?dist}
+Version:        1.7.0
+Release:        1%{?dist}
 Summary:        weather radar data processing
 
 License:        MIT
@@ -61,6 +61,9 @@ documented and easy to use.
 
 
 %changelog
+* Thu Jun 18 2020 Daniele Branchini <dbranchini@arpae.it> - 1.7.0-1
+- Upstream update
+
 * Wed May  6 2020 Daniele Branchini <dbranchini@arpae.it> - 1.6.2-2
 - Added h5netcdf dependency
 
