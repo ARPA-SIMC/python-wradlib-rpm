@@ -21,3 +21,4 @@ deploy:
   true:
     branch: master
     condition: $DOCKER_IMAGE = fedora:32
+dist: bionic
