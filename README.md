@@ -1,13 +1,10 @@
-[![Build Status](https://badges.herokuapp.com/travis/ARPA-SIMC/python-wradlib-rpm?branch=master&env=DOCKER_IMAGE=fedora:31&label=fedora31)](https://travis-ci.org/ARPA-SIMC/python-wradlib-rpm)
-[![Build Status](https://badges.herokuapp.com/travis/ARPA-SIMC/python-wradlib-rpm?branch=master&env=DOCKER_IMAGE=fedora:32&label=fedora32)](https://travis-ci.org/ARPA-SIMC/python-wradlib-rpm)
-[![Build Status](https://badges.herokuapp.com/travis/ARPA-SIMC/python-wradlib-rpm?branch=master&env=DOCKER_IMAGE=fedora:33&label=fedora33)](https://travis-ci.org/ARPA-SIMC/python-wradlib-rpm)
-[![Build Status](https://badges.herokuapp.com/travis/ARPA-SIMC/python-wradlib-rpm?branch=master&env=DOCKER_IMAGE=fedora:rawhide&label=fedorarawhide)](https://travis-ci.org/ARPA-SIMC/python-wradlib-rpm)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/centos7.png)](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/centos8.png)](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/fedora32.png)](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/)
+[![Build Status](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/fedora34.png)](https://simc.arpae.it/moncic-ci/python-wradlib-rpm/)
 [![Build Status](https://copr.fedorainfracloud.org/coprs/simc/stable/package/python-wradlib/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/simc/stable/package/python-wradlib/)
 
 # rpm packaging files for wradlib
-
-
-
 
 This github repository neither hosts nor provide wradlib sources, it's meant to
 host (unofficial) convenience files for Fedora packaging.
