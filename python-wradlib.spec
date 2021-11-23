@@ -56,7 +56,6 @@ documented and easy to use.
 #%{__python3} setup.py test
 
 %files -n %{python3_vers}-wradlib
-%{_bindir}/testrunner
 %{python3_sitelib}/*
 
 
