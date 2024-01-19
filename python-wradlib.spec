@@ -11,7 +11,7 @@ Summary:        weather radar data processing
 
 License:        MIT
 URL:            https://github.com/wradlib/wradlib/
-Source0:        https://github.com/wradlib/wradlib/archive/%{version}.tar.gz
+Source0:        %pypi_source
 BuildArch:      noarch
 
 BuildRequires:  %{python3_vers}-devel
