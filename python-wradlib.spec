@@ -16,7 +16,9 @@ BuildArch:      noarch
 
 BuildRequires:  %{python3_vers}-devel
 BuildRequires:  %{python3_vers}-setuptools
+BuildRequires:  %{python3_vers}-setuptools_scm
 BuildRequires:  %{python3_vers}-semver
+BuildRequires:  %{python3_vers}-wheel
 
 %description
 The wradlib project has been initiated in order facilitate the use of
@@ -46,9 +48,11 @@ documented and easy to use.
 %autosetup -n wradlib-%{version}
 
 %build
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %pyproject_wheel
 
 %install
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %pyproject_install
 
 %check
