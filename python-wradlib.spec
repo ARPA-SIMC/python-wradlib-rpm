@@ -5,8 +5,8 @@
 %endif
 
 Name:           python-wradlib
-Version:        1.13.0
-Release:        2%{?dist}
+Version:        1.19.2
+Release:        1%{?dist}
 Summary:        weather radar data processing
 
 License:        MIT
@@ -60,6 +60,9 @@ documented and easy to use.
 
 
 %changelog
+* Wed Apr 16 2025 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.19.2-1
+- Upstream update
+
 * Fri Jan 19 2024 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.13.0-2
 - PyPI source URL
 
