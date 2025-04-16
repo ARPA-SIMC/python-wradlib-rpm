@@ -46,10 +46,10 @@ documented and easy to use.
 %autosetup -n wradlib-%{version}
 
 %build
-%py3_build
+%pyproject_wheel
 
 %install
-%py3_install
+%pyproject_install
 
 %check
 # TODO: tests need WRADLIB_DATA env var set (and data)
