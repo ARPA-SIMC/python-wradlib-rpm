@@ -5,20 +5,18 @@
 %endif
 
 Name:           python-wradlib
-Version:        1.19.2
-Release:        1%{?dist}
+Version:        1.13.0
+Release:        2%{?dist}
 Summary:        weather radar data processing
 
 License:        MIT
 URL:            https://github.com/wradlib/wradlib/
-Source0:        https://files.pythonhosted.org/packages/source/w/wradlib/wradlib-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/45/99/fa4383be69c7a82ede6f1ef22d215b0efb8c582eec4f5f65ba236eb47524/wradlib-1.13.0.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  %{python3_vers}-devel
 BuildRequires:  %{python3_vers}-setuptools
-BuildRequires:  %{python3_vers}-setuptools_scm
 BuildRequires:  %{python3_vers}-semver
-BuildRequires:  %{python3_vers}-wheel
 
 %description
 The wradlib project has been initiated in order facilitate the use of
@@ -48,12 +46,10 @@ documented and easy to use.
 %autosetup -n wradlib-%{version}
 
 %build
-export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
-%pyproject_wheel
+%py3_build
 
 %install
-export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
-%pyproject_install
+%py3_install
 
 %check
 # TODO: tests need WRADLIB_DATA env var set (and data)
@@ -64,9 +60,6 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 
 %changelog
-* Wed Apr 16 2025 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.19.2-1
-- Upstream update
-
 * Fri Jan 19 2024 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.13.0-2
 - PyPI source URL
 
