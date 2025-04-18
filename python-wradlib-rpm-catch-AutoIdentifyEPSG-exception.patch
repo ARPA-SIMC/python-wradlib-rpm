@@ -1,0 +1,14 @@
+--- wradlib-1.13.0/wradlib/georef/projection.py.good	2025-04-18 11:44:13.619227786 +0200
++++ wradlib-1.13.0/wradlib/georef/projection.py	2025-04-18 11:46:33.735496420 +0200
+@@ -201,7 +201,10 @@
+     """
+     proj = osr.SpatialReference()
+     proj.ImportFromProj4(proj4str)
+-    proj.AutoIdentifyEPSG()
++    try:
++        proj.AutoIdentifyEPSG()
++    except RuntimeError:
++        pass
+ 
+     if LooseVersion(gdal.VersionInfo("RELEASE_NAME")) < LooseVersion("3"):
+         proj.Fixup()

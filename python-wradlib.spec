@@ -6,12 +6,13 @@
 
 Name:           python-wradlib
 Version:        1.13.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        weather radar data processing
 
 License:        MIT
 URL:            https://github.com/wradlib/wradlib/
 Source0:        https://files.pythonhosted.org/packages/45/99/fa4383be69c7a82ede6f1ef22d215b0efb8c582eec4f5f65ba236eb47524/wradlib-1.13.0.tar.gz
+Patch1:         https://github.com/arpa-simc/python-wradlib/raw/v%{version}-%{releaseno}/python-wradlib-rpm-catch-AutoIdentifyEPSG-exception.patch
 BuildArch:      noarch
 
 BuildRequires:  %{python3_vers}-devel
@@ -43,7 +44,7 @@ on new algorithms. wradlib is an open source library which is well
 documented and easy to use.
 
 %prep
-%autosetup -n wradlib-%{version}
+%autosetup -n wradlib-%{version} -p1
 
 %build
 %py3_build
@@ -60,6 +61,9 @@ documented and easy to use.
 
 
 %changelog
+* Fri Apr 18 2025 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.13.0-3
+- Catch AutoIdentifyEPSG error
+
 * Fri Jan 19 2024 Emanuele Di Giacomo <edigiacomo@arpae.it> - 1.13.0-2
 - PyPI source URL
 
